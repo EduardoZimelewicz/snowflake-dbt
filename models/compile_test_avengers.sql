@@ -1,1 +1,0 @@
-select * from {{ source('avengers','avengers_history') }};
