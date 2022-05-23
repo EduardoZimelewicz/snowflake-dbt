@@ -1,1 +1,5 @@
 version: 2
+
+models:
+  - name: rpt_avengers_reporting
+  - name: rpt_movie_details
