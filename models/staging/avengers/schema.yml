@@ -9,3 +9,6 @@ models:
       - name: avenger_name
         tests:
           - not_null
+      - name: year_joined
+        tests:
+          - test_is_valid_avenger_year
