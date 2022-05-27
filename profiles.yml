@@ -1,0 +1,23 @@
+snowflake_dbt:
+  outputs:
+    dev:
+      account: {{ env_var('SNOWFLAKE_ACCOUNT_URL') }}
+      database: ANALYTICS_DEV
+      password: {{ env_var('SNOWFLAKE_USER_PASSWORD') }}
+      role: DBT_TRAINING
+      schema: PUBLIC
+      threads: 1
+      type: snowflake
+      user: {{ env_var('SNOWFLAKE_USER_NAME') }}
+      warehouse: DBT_TRAINING_WH
+    prod:
+      account: {{ env_var('SNOWFLAKE_ACCOUNT_URL') }}
+      database: ANALYTICS
+      password: {{ env_var('SNOWFLAKE_USER_PASSWORD') }}
+      role: DBT_TRAINING
+      schema: PUBLIC
+      threads: 1
+      type: snowflake
+      user: {{ env_var('SNOWFLAKE_USER_NAME') }}
+      warehouse: DBT_TRAINING_WH
+  target: dev
